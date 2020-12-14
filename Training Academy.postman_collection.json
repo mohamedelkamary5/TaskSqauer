@@ -1,0 +1,238 @@
+{
+	"info": {
+		"_postman_id": "2ec4bb74-5834-4fb4-aa6b-7581685b2163",
+		"name": "Training Academy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "email",
+							"value": "user@user.com",
+							"type": "text"
+						},
+						{
+							"key": "password",
+							"value": "12345678",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://academy-training.appssquare.com/api/POSTS",
+					"protocol": "https",
+					"host": [
+						"academy-training",
+						"appssquare",
+						"com"
+					],
+					"path": [
+						"api",
+						"POSTS"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add new post",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2NlMWQyZTA1YjhjNjJhNTdhZjhlZmFlNDU4Y2I3OTdmNjRiOGE0NzY1NDBiODZhNjQ3ZDI5MTVlZDMwYmRhMzQ3N2NkZmI5ZTQ4MTZjYTYiLCJpYXQiOjE2MDU2OTE5MzcsIm5iZiI6MTYwNTY5MTkzNywiZXhwIjoxNjM3MjI3OTM3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.BqAfbnQZ6zYRAvqv3NbWCV8I5iFeDZcVIZgJSxS3iencowMxO8bNGV4-VaCI3l-Q2ZrB8z3c7r-8P5l6IDqEd31am9qj4ayLB2lUwebbzfemnN1fksHXBwqhVcl5sEcIlwpKgMx4DkNrJs4BsxAaR4bzSEd4Cpd9nXVuuaY30UZ3fo5eR8-IEX4JOg2bMoZUtZhVPWKYIL4nZTLw1heVLmwhleUNotXBKGia47Qw2UdbqgXD1wzbrC7TqqFXiRrcLe54Z7TrSGD9wJTvGJ9FNqvBCVT7bzaua8u2GLcAT3B8_-EwU_hTePl-pZg-3QrKEJuKA7By8d9zjfG3kcxiyn72c_oXNi-VAcnhw0SINCtECHVHD-9-zNgzkWKeR4O5n5hmihIhkQXg6KO3TUOYHy7K5MD2cnxBzpBEDo_dAZIcqxbBMbASog8GEI0jt6PDgC8MklnJs3QAkB8aMcWdMd801excl6cr-9QIj0I8KXTR4k6uPeywogXWWnZGRXv8ULFSYmGUEpiqHqe5yLKHCP8teb5zMY9N4FsktVtGVXHSEKPFV27puqkPgvk2GFJBPMw5EJ3xb8PlvPIzZ4owje2XEpwgHFsCSX2Dn_ZaMUcY0Z7p9u7fiGgklMVUPD9rJ7I0i3p1wv5wijGV3gXOiN3keB8y_gWhjWjTxQb1A3s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "a test",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "a test2",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://academy-training.appssquare.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"academy-training",
+						"appssquare",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get all posts",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2NlMWQyZTA1YjhjNjJhNTdhZjhlZmFlNDU4Y2I3OTdmNjRiOGE0NzY1NDBiODZhNjQ3ZDI5MTVlZDMwYmRhMzQ3N2NkZmI5ZTQ4MTZjYTYiLCJpYXQiOjE2MDU2OTE5MzcsIm5iZiI6MTYwNTY5MTkzNywiZXhwIjoxNjM3MjI3OTM3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.BqAfbnQZ6zYRAvqv3NbWCV8I5iFeDZcVIZgJSxS3iencowMxO8bNGV4-VaCI3l-Q2ZrB8z3c7r-8P5l6IDqEd31am9qj4ayLB2lUwebbzfemnN1fksHXBwqhVcl5sEcIlwpKgMx4DkNrJs4BsxAaR4bzSEd4Cpd9nXVuuaY30UZ3fo5eR8-IEX4JOg2bMoZUtZhVPWKYIL4nZTLw1heVLmwhleUNotXBKGia47Qw2UdbqgXD1wzbrC7TqqFXiRrcLe54Z7TrSGD9wJTvGJ9FNqvBCVT7bzaua8u2GLcAT3B8_-EwU_hTePl-pZg-3QrKEJuKA7By8d9zjfG3kcxiyn72c_oXNi-VAcnhw0SINCtECHVHD-9-zNgzkWKeR4O5n5hmihIhkQXg6KO3TUOYHy7K5MD2cnxBzpBEDo_dAZIcqxbBMbASog8GEI0jt6PDgC8MklnJs3QAkB8aMcWdMd801excl6cr-9QIj0I8KXTR4k6uPeywogXWWnZGRXv8ULFSYmGUEpiqHqe5yLKHCP8teb5zMY9N4FsktVtGVXHSEKPFV27puqkPgvk2GFJBPMw5EJ3xb8PlvPIzZ4owje2XEpwgHFsCSX2Dn_ZaMUcY0Z7p9u7fiGgklMVUPD9rJ7I0i3p1wv5wijGV3gXOiN3keB8y_gWhjWjTxQb1A3s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://academy-training.appssquare.com/api/posts",
+					"protocol": "https",
+					"host": [
+						"academy-training",
+						"appssquare",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete a post by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2NlMWQyZTA1YjhjNjJhNTdhZjhlZmFlNDU4Y2I3OTdmNjRiOGE0NzY1NDBiODZhNjQ3ZDI5MTVlZDMwYmRhMzQ3N2NkZmI5ZTQ4MTZjYTYiLCJpYXQiOjE2MDU2OTE5MzcsIm5iZiI6MTYwNTY5MTkzNywiZXhwIjoxNjM3MjI3OTM3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.BqAfbnQZ6zYRAvqv3NbWCV8I5iFeDZcVIZgJSxS3iencowMxO8bNGV4-VaCI3l-Q2ZrB8z3c7r-8P5l6IDqEd31am9qj4ayLB2lUwebbzfemnN1fksHXBwqhVcl5sEcIlwpKgMx4DkNrJs4BsxAaR4bzSEd4Cpd9nXVuuaY30UZ3fo5eR8-IEX4JOg2bMoZUtZhVPWKYIL4nZTLw1heVLmwhleUNotXBKGia47Qw2UdbqgXD1wzbrC7TqqFXiRrcLe54Z7TrSGD9wJTvGJ9FNqvBCVT7bzaua8u2GLcAT3B8_-EwU_hTePl-pZg-3QrKEJuKA7By8d9zjfG3kcxiyn72c_oXNi-VAcnhw0SINCtECHVHD-9-zNgzkWKeR4O5n5hmihIhkQXg6KO3TUOYHy7K5MD2cnxBzpBEDo_dAZIcqxbBMbASog8GEI0jt6PDgC8MklnJs3QAkB8aMcWdMd801excl6cr-9QIj0I8KXTR4k6uPeywogXWWnZGRXv8ULFSYmGUEpiqHqe5yLKHCP8teb5zMY9N4FsktVtGVXHSEKPFV27puqkPgvk2GFJBPMw5EJ3xb8PlvPIzZ4owje2XEpwgHFsCSX2Dn_ZaMUcY0Z7p9u7fiGgklMVUPD9rJ7I0i3p1wv5wijGV3gXOiN3keB8y_gWhjWjTxQb1A3s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://academy-training.appssquare.com/api/posts/5",
+					"protocol": "https",
+					"host": [
+						"academy-training",
+						"appssquare",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"5"
+					]
+				},
+				"description": " 5 is an example of post id"
+			},
+			"response": []
+		},
+		{
+			"name": "Update a post by ID",
+			"request": {
+				"auth": {
+					"type": "bearer",
+					"bearer": [
+						{
+							"key": "token",
+							"value": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJhdWQiOiIxIiwianRpIjoiY2NlMWQyZTA1YjhjNjJhNTdhZjhlZmFlNDU4Y2I3OTdmNjRiOGE0NzY1NDBiODZhNjQ3ZDI5MTVlZDMwYmRhMzQ3N2NkZmI5ZTQ4MTZjYTYiLCJpYXQiOjE2MDU2OTE5MzcsIm5iZiI6MTYwNTY5MTkzNywiZXhwIjoxNjM3MjI3OTM3LCJzdWIiOiIxIiwic2NvcGVzIjpbXX0.BqAfbnQZ6zYRAvqv3NbWCV8I5iFeDZcVIZgJSxS3iencowMxO8bNGV4-VaCI3l-Q2ZrB8z3c7r-8P5l6IDqEd31am9qj4ayLB2lUwebbzfemnN1fksHXBwqhVcl5sEcIlwpKgMx4DkNrJs4BsxAaR4bzSEd4Cpd9nXVuuaY30UZ3fo5eR8-IEX4JOg2bMoZUtZhVPWKYIL4nZTLw1heVLmwhleUNotXBKGia47Qw2UdbqgXD1wzbrC7TqqFXiRrcLe54Z7TrSGD9wJTvGJ9FNqvBCVT7bzaua8u2GLcAT3B8_-EwU_hTePl-pZg-3QrKEJuKA7By8d9zjfG3kcxiyn72c_oXNi-VAcnhw0SINCtECHVHD-9-zNgzkWKeR4O5n5hmihIhkQXg6KO3TUOYHy7K5MD2cnxBzpBEDo_dAZIcqxbBMbASog8GEI0jt6PDgC8MklnJs3QAkB8aMcWdMd801excl6cr-9QIj0I8KXTR4k6uPeywogXWWnZGRXv8ULFSYmGUEpiqHqe5yLKHCP8teb5zMY9N4FsktVtGVXHSEKPFV27puqkPgvk2GFJBPMw5EJ3xb8PlvPIzZ4owje2XEpwgHFsCSX2Dn_ZaMUcY0Z7p9u7fiGgklMVUPD9rJ7I0i3p1wv5wijGV3gXOiN3keB8y_gWhjWjTxQb1A3s",
+							"type": "string"
+						}
+					]
+				},
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "title",
+							"value": "a test",
+							"type": "text"
+						},
+						{
+							"key": "body",
+							"value": "test test ",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "https://academy-training.appssquare.com/api/posts/4",
+					"protocol": "https",
+					"host": [
+						"academy-training",
+						"appssquare",
+						"com"
+					],
+					"path": [
+						"api",
+						"posts",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

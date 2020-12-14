@@ -49,7 +49,8 @@ export default function Home() {
                 <div className="col-md-4"><h5>Title</h5></div>
                 <div className="col-md-6"><h5>Body</h5></div>
             </div>
-            {posts.map(post => {
+            {
+            posts.map(post => {
                 return (
                     <div key={post.id} className="row py-2 border">
                         <div className="col-md-4"><h6>{post.title}</h6></div>
