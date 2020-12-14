@@ -65,36 +65,7 @@ export default class Login extends Component {
             return <Loading />
         }
         return (
-           
-            //  <div className='login'>
-            //     <div className="containser-fluid">
-            //     <div className="row">
-            //         <div className="col-md-6 col-lg-4 offset-md-3 offset-lg-4">
-            //         <div className="card form-holder">
-            //         <div className="card-body">
-            //         <h1 className='text-center'>Login</h1>
-            //         <form onSubmit={this.formSubmit} method="post">
-            //             <div className="form-group">
-            //             <label>Email</label>
-            //                 <input type="email" className="form-control" placeholder='email' name='email' onChange={this.onChange} value={this.state.email} /> 
-            //             </div>
-            //             <div className="form-group">
-            //             <label>Password</label>
-            //             <input type="password" className="form-control" placeholder='password' name='password' onChange={this.onChange} value={this.state.password} /> 
-            //             </div>
-            //             <div className="row">
-            //             <div className="col-12 text-center">
-            //                 <button className="btn btn-primary px-4">Login</button>
-            //             </div>
-            //             </div>
-            //         </form>
-            //             </div>
-            //         </div>
-            //         </div>
-            //     </div>
-            //     </div>
-            // </div>
-
+       
             <div className="limiter">
                 <div className="container-login100" >
                     <div className="wrap-login100 p-t-30 p-b-50">
