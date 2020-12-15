@@ -1,9 +1,17 @@
 .add {
   border: 2px solid #0000;
+  background: #555555;
+  width: 100%;
+  color: #fff;
+  margin: 0 auto;
+}
+.add .container {
+  height: 100vh;
 }
 
 .add-form {
   border: 2px solid #80bdff;
+  border-radius: 20px;
   padding: 20px;
   margin-top: 50px;
 }

@@ -49,6 +49,7 @@ export default class Login extends Component {
             }).catch( error => {
                console.log('catch error', JSON.parse(JSON.stringify(error)))
                console.log('eeee', error)
+               alert('Email or Password Incorrect. Try Again')
 
             })
       
