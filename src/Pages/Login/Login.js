@@ -76,12 +76,12 @@ export default class Login extends Component {
                         <form onSubmit={this.formSubmit} method="post" className="login100-form validate-form p-b-33 p-t-5">
 
                             <div className="wrap-input100 validate-input" data-validate = "Enter username">
-                                <input type="email" className="input100" placeholder='email' name='email' onChange={this.onChange} value={this.state.email} /> 
+                                <input type="email" required className="input100" placeholder='email' name='email' onChange={this.onChange} value={this.state.email} /> 
                                 <span className="focus-input100" data-placeholder="&#xe82a;"></span>
                             </div>
 
                             <div className="wrap-input100 validate-input" data-validate="Enter password">
-                                <input type="password" className="input100" placeholder='password' name='password' onChange={this.onChange} value={this.state.password} /> 
+                                <input type="password" required className="input100" placeholder='password' name='password' onChange={this.onChange} value={this.state.password} /> 
                                 <span className="focus-input100" data-placeholder="&#xe80f;"></span>
                             </div>
 

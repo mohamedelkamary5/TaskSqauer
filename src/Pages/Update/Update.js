@@ -46,14 +46,14 @@ export default function UpdatePost(props) {
                         <h2 className='text-center'>Update Post</h2>
                         <div className="form-group">
                             <label>title </label>
-                            <input type="text" name="title" className="form-control" placeholder="title"                        
+                            <input type="text" required name="title" className="form-control" placeholder="title"                        
                                 onChange={e => setPost({...post, title: e.target.value})}
 
                             />
                         </div>
                         <div className="form-group">
                             <label>body </label>
-                            <input type="text" name="body" className="form-control" placeholder="body"                        
+                            <input type="text" name="body" required className="form-control" placeholder="body"                        
                                 onChange={e => setPost({...post, body: e.target.value})}
                             />
                         </div>
